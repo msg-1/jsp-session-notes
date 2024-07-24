@@ -2,19 +2,14 @@
 
 <body>
 
+<jsp:include page="my-header.html" />
 
-<jsp:include page="header.jsp"></jsp:include>
+Blah blah blah .... <br/> <br/>
+Blah blah blah .... <br/> <br/>
+Blah blah blah .... <br/> <br/>
 
-<p>blah blah.......</p>
-<p>blah blah.......</p>
-<p>blah blah.......</p>
-<p>blah blah.......</p>
-
-
-
-<jsp:include page="footer.html"></jsp:include>
+<jsp:include page="my-footer.jsp" />
 
 </body>
-
 
 </html>
