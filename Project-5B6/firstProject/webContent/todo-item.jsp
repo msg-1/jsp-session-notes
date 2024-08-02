@@ -1,56 +1,56 @@
-<%@ page import= "java.util.*" %>
 
+<%@ page import="java.util.*" %>
 <html>
 
 <body>
 
-
-<!-- step-1 creating a form -->
+<!-- step-1 create html  -->
 
 <form action="todo-item.jsp">
-new Todo item: <input type="text" name="todoItem"/>
+
+<input type="text" name="theItem"/>
 
 <input type="submit" value="submit"/>
 
 </form>
 
 
-<!-- step-2 creating array -->
+<!-- step-2 adding new items to to-do list -->
+
 <%
-List<String> items= (List<String>)	session.getAttribute("myTodoList");
+
+List<String> items= (List<String>) session.getAttribute("todo-list");
 
 
-if(items == null){
+if(items ==null){
 	
 	items= new ArrayList<String>();
 	
-	session.setAttribute("myTodoList", items);
+	session.setAttribute("todo-list", items);
+	
 }
 
-String newItem= request.getParameter("todoItem");
+String newItem= request.getParameter("theItem");
 
 if(newItem !=null){
 	
 	items.add(newItem);
 }
 
-
 %>
 
 
-<!-- step-3 to render the array -->
+<!-- step-3 rendering -->
 
-
-<h1>Todo Items</h1>
 <%
-
 
 for(String item: items){
 	
-	out.println("<li>"+ item + "</li>");
+	out.println("<li>" + item + "</li>");
 }
-
 %>
 
+
 </body>
+
 </html>

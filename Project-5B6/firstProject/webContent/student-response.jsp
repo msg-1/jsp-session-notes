@@ -1,6 +1,10 @@
 <html>
 
 
-<h1>firstName: ${param.firstname }</h1>
-<h1>LastName : ${param.lastname }</h1>
+
+<body>
+
+
+<h1> this is students details: ${param.firstName } ${param.lastName }</h1>
+</body>
 </html>
